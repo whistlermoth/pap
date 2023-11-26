@@ -55,7 +55,7 @@
             <div class="col-12">
               <div class="row align-items-center mb-2">
                 <div class="col">
-                  <h2 class="h5 page-title">P.A.P [Potret Angka Portfolio] Mekaar - PNM Denpasar</h2>
+                  <h2 class="h5 page-title text-center">P.A.P [Potret Angka Portfolio] Mekaar - PNM Denpasar</h2>
                 </div>
               </div>
               <div class="row">
