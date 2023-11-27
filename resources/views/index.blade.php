@@ -467,7 +467,7 @@
                         </div>
                         <div class="col-4 text-center mb-3">
                           <p class="text mb-1">Progress NoA NPL</p>
-                          <h6 class="mb-1">{{ number_format(optional($record)->sum('noa_npl_bln_lalu') - optional($record)->sum('noa_npl'), 0, ',', '.')}}</h6>
+                          <h6 class="mb-1">{{ number_format(optional($record)->sum('noa_npl') - optional($record)->sum('noa_npl_bln_lalu'), 0, ',', '.')}}</h6>
                         </div>
                         <div class="col-4 text-center mb-3">
                           <p class="text mb-1">% NoA NPL</p>
@@ -483,7 +483,7 @@
                         </div>
                         <div class="col-4 text-center mb-3">
                           <p class="text mb-1">Progress OS NPL</p>
-                          <h6 class="mb-1">{{ number_format(optional($record)->sum('os_npl_bln_lalu') - optional($record)->sum('os_npl'), 0, ',', '.')}}</h6>
+                          <h6 class="mb-1">{{ number_format(optional($record)->sum('os_npl') - optional($record)->sum('os_npl_bln_lalu'), 0, ',', '.')}}</h6>
                         </div>
                         <div class="col-4 text-center mb-3">
                           <p class="text mb-1">% OS NPL</p>
