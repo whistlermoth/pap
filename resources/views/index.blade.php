@@ -127,7 +127,7 @@
                               <div class="col-4 text-center mb-3">
                                 <b>{{ $request->region }} {{ $request->area }} {{ $request->unit }} {{ $request->region_all }}</b><br>
                                 @if(!empty($record))
-                                {{ \Carbon\Carbon::parse('30-11-2023')->format('d F Y') }}
+                                {{ \Carbon\Carbon::parse('04-12-2023')->format('d F Y') }}
                                 @endif
                               </div>
                               @php
