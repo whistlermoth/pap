@@ -36,8 +36,7 @@
         font-size: 12px!important;
       }
       .card-header {
-          background-color: #20b2aa!important;
-          
+        background-color: #20b2aa!important;   
       }
     </style>
   </head>
@@ -166,8 +165,8 @@
                             </div>
                           </div> <!-- .card-body -->
                         </div> <!-- .card -->
-                        <a href="https://bit.ly/PlanPencairanMekaar" class="btn btn-success" role="button">Plan Pencairan</a>
-                        <a href="https://rbm.pnmdenpasar.com/" class="btn btn-warning" role="button">RBM</a>
+                        <a href="https://bit.ly/PlanPencairanMekaar" class="btn btn-dark" role="button" target="_blank">Inputan Plan PNC</a>
+                        <a href="https://rbm.pnmdenpasar.com/" class="btn btn-dark" role="button" target="_blank">Buat RBM</a>
                       </div> <!-- .col -->
                     </div> <!-- /.card-body -->
                   </div> <!-- /.card -->
