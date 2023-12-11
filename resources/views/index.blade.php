@@ -165,9 +165,9 @@
                               </div>
                             </div>
                           </div> <!-- .card-body -->
-                          <a href="https://bit.ly/PlanPencairanMekaar" class="btn .btn-success" role="button">Plan Pencairan</a>
-                          <a href="https://rbm.pnmdenpasar.com/" class="btn .btn-warning" role="button">RBM</a>
                         </div> <!-- .card -->
+                        <a href="https://bit.ly/PlanPencairanMekaar" class="btn .btn-success" role="button">Plan Pencairan</a>
+                        <a href="https://rbm.pnmdenpasar.com/" class="btn .btn-warning" role="button">RBM</a>
                       </div> <!-- .col -->
                     </div> <!-- /.card-body -->
                   </div> <!-- /.card -->
