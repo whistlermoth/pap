@@ -127,7 +127,7 @@
                               <div class="col-4 text-center mb-3">
                                 <b>{{ $request->region }} {{ $request->area }} {{ $request->unit }} {{ $request->region_all }}</b><br>
                                 @if(!empty($record))
-                                {{ \Carbon\Carbon::parse('04-12-2023')->format('d F Y') }}
+                                {{ \Carbon\Carbon::parse('11-12-2023')->format('d F Y') }}
                                 @endif
                               </div>
                               @php
@@ -350,7 +350,14 @@
                             @endif
                         </div>
                         <div class="col-4 text-center mb-3">
+                          <p class="text mb-1">Lending</p>
+                          <h6 class="mb-1">{{ number_format(optional($record)->sum('penyaluran_plafond_kumulatif'), 0, ',', '.')}}</h6>
                         </div>
+                        <div class="col-4 text-center mb-3">
+                          <p class="text mb-1">Target EoM Lending</p>
+                          <h6 class="mb-1">{{ number_format(optional($record)->sum('rkap_des'), 0, ',', '.')}}</h6>
+                        </div>
+
                       </div>
                     </div> <!-- .card-body -->
                   </div> <!-- .card -->
