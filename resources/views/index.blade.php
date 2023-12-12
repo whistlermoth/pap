@@ -165,8 +165,8 @@
                             </div>
                           </div> <!-- .card-body -->
                         </div> <!-- .card -->
-                        <a href="https://bit.ly/PlanPencairanMekaar" class="btn btn-dark" role="button" target="_blank">Inputan Plan PNC</a>
-                        <a href="https://rbm.pnmdenpasar.com/" class="btn btn-dark" role="button" target="_blank">Buat RBM</a>
+                        <a href="https://bit.ly/PlanPencairanMekaar" class="btn btn-dark" role="button" target="_blank">Inputan Plan PNC (MRM)</a>
+                        <a href="https://rbm.pnmdenpasar.com/" class="btn btn-dark" role="button" target="_blank">Create RBM (Bulanan)</a>
                       </div> <!-- .col -->
                     </div> <!-- /.card-body -->
                   </div> <!-- /.card -->
