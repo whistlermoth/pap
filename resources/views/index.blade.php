@@ -40,6 +40,7 @@
       }
       .btn-dark:hover {
         background-color: #ffffff!important;
+        color: #000000!important;
       }
     </style>
   </head>
