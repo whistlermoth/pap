@@ -629,7 +629,7 @@
                           <a href="https://bit.ly/PlanPencairanMekaar" class="btn btn-dark" role="button" target="_blank">Inputan Plan PNC (MRM)</a>
                         </div>
                         <div class="col-12 text-center mb-3">
-                          <a href="https://rbm.pnmdenpasar.com/" class="btn btn-dark" role="button" target="_blank">&nbsp;&nbsp;Create RBM (Bulanan)&nbsp;&nbsp;</a>
+                          <a href="https://rbm.pnmdenpasar.com/" class="btn btn-dark" role="button" target="_blank">&nbsp;&nbsp;&nbsp;Create RBM (Bulanan)&nbsp;&nbsp;&nbsp;</a>
                         </div>
                       </div>
                       
