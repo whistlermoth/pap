@@ -165,8 +165,6 @@
                             </div>
                           </div> <!-- .card-body -->
                         </div> <!-- .card -->
-                        <a href="https://bit.ly/PlanPencairanMekaar" class="btn btn-dark" role="button" target="_blank">Inputan Plan PNC (MRM)</a>
-                        <a href="https://rbm.pnmdenpasar.com/" class="btn btn-dark" role="button" target="_blank">Create RBM (Bulanan)</a>
                       </div> <!-- .col -->
                     </div> <!-- /.card-body -->
                   </div> <!-- /.card -->
@@ -548,7 +546,7 @@
                 </div> <!-- .col -->
               </div> <!-- .row -->
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="col-md-4 col-lg-4">
                   <div class="card shadow eq-card mb-4">
                     <div class="card-header">
                       <strong class="card-title">SDM</strong>
@@ -582,7 +580,7 @@
                     </div> <!-- .card-body -->
                   </div> <!-- .card -->
                 </div> <!-- .col -->
-                <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="col-md-4 col-lg-4">
                   <div class="card shadow eq-card mb-4">
                     <div class="card-header">
                       <strong class="card-title">SDM</strong>
@@ -612,7 +610,25 @@
                         <div class="col-12 text-center mb-3">
                         </div>
                       </div>
-                     
+                      
+                    </div> <!-- .card-body -->
+                  </div> <!-- .card -->
+                </div> <!-- .col -->
+                <div class="col-md-4 col-lg-4">
+                  <div class="card shadow eq-card mb-4">
+                    <div class="card-header">
+                      <strong class="card-title">Additional</strong>
+                    </div>
+                    <div class="card-body">
+                      <div class="row items-align-center">
+                        <div class="col-12 text-center mb-3">
+                          <a href="https://bit.ly/PlanPencairanMekaar" class="btn btn-dark" role="button" target="_blank">Inputan Plan PNC (MRM)</a>
+                        </div>
+                        <div class="col-12 text-center mb-3">
+                          <a href="https://rbm.pnmdenpasar.com/" class="btn btn-dark" role="button" target="_blank">Create RBM (Bulanan)</a>
+                        </div>
+                      </div>
+                      
                     </div> <!-- .card-body -->
                   </div> <!-- .card -->
                 </div> <!-- .col -->
