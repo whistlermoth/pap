@@ -622,10 +622,10 @@
                     <div class="card-body">
                       <div class="row items-align-center">
                         <div class="col-12 text-center mb-3">
-                          <a href="https://bit.ly/PlanPencairanMekaar" class="btn btn-dark" role="button" target="_blank">Inputan Plan PNC (MRM)</a>
+                          <a href="https://bit.ly/PlanPencairanMekaar" class="btn btn-outline-dark" role="button" target="_blank">Inputan Plan PNC (MRM)</a>
                         </div>
                         <div class="col-12 text-center mb-3">
-                          <a href="https://rbm.pnmdenpasar.com/" class="btn btn-dark" role="button" target="_blank">Create RBM (Bulanan)</a>
+                          <a href="https://rbm.pnmdenpasar.com/" class="btn btn-outline-dark" role="button" target="_blank">&nbsp;Create RBM (Bulanan)&nbsp;</a>
                         </div>
                       </div>
                       
