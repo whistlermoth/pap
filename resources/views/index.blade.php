@@ -42,6 +42,12 @@
         background-color: #ffffff!important;
         color: #000000!important;
       }
+      body{
+        background-image: url('gambar/bgpap.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
     </style>
   </head>
   <body class="vertical  light  ">
@@ -122,7 +128,6 @@
                 <div class="col-md-6">
                   <div class="card shadow mb-4">
                     <div class="card-body">
-                      
                       <div class="col-md-12 col-lg-12">
                         <div class="card shadow eq-card mb-4">
                           <div class="card-body">
