@@ -43,7 +43,7 @@
         color: #000000!important;
       }
       body{
-        background-image: url('gambar/bgpap.png');
+        background-image: url('gambar/pnmdps.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
