@@ -626,7 +626,7 @@
                 <div class="col-md-4 col-lg-4">
                   <div class="card shadow eq-card mb-4">
                     <div class="card-header">
-                      <strong class="card-title">Additional</strong>
+                      <strong class="card-title">Additional Menu</strong>
                     </div>
                     <div class="card-body">
                       <div class="row items-align-center">
