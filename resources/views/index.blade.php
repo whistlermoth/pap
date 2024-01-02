@@ -150,7 +150,7 @@
                               <div class="col-4 text-center mb-3">
                                 <p class="text mb-1">Sisa Hari Kerja</p>
                                 @if($record)
-                                <h1>-</h1>
+                                <h6>0</h6>
                                 {{-- <h6 class="mb-1"> {{ $record->first()->sisa_minggu_kerja_sd_des_23 * 5 }}</h6> --}}
                                 {{-- <!--<h6 class="mb-1">{{ $daysLeft }} Hari</h6>--> --}}
                                 @endif
@@ -169,7 +169,7 @@
                               <div class="col-4 text-center mb-3">
                                 <p class="text mb-1">Sisa Minggu Kerja</p>
                                 @if(!empty($record))
-                                <h1>-</h1>
+                                <h6>0</h6>
                                 {{-- <h6 class="mb-1">{{ $record->first()->sisa_minggu_kerja_sd_des_23 }} Minggu</h6> --}}
                                 @endif
                               </div>
