@@ -18,3 +18,8 @@ Route::get('/import', [MekaarController::class, 'import'])->name('index.import')
 Route::get('/truncate', [MekaarController::class, 'truncate'])->name('index.truncate');
 
 Route::post('/import-excel', [MekaarController::class, 'importExcel'])->name('import-excel');
+
+// Ajax
+Route::get('/pilih-area', [MekaarController::class, 'pilihArea'])->name('pilih-area');
+Route::get('/pilih-unit', [MekaarController::class, 'pilihUnit'])->name('pilih-unit');
+Route::get('/pilih-region', [MekaarController::class, 'pilihRegion'])->name('pilih-region');

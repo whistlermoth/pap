@@ -29,6 +29,32 @@
     <link rel="stylesheet" href="{{ URL::asset('css/app-light.css')}}" id="lightTheme">
     <link rel="stylesheet" href="{{ URL::asset('css/app-dark.css')}}" id="darkTheme" disabled>
     <style>
+      #loadingAnimation {
+          position: fixed; /* Full-screen */
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(255, 255, 255); /* Semi-transparent white background */
+          display: flex;
+          justify-content: center; /* Center horizontally */
+          align-items: center; /* Center vertically */
+          z-index: 9999; /* Ensure it's above other elements */
+      }
+
+      .loader {
+          border: 5px solid #f3f3f3; /* Light grey */
+          border-top: 5px solid #3498db; /* Blue */
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          animation: spin 2s linear infinite;
+      }
+
+      @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+      }
       h6{
         font-size: 12px!important;
       }
@@ -79,47 +105,47 @@
                                 $region = App\Models\Mekaar::select('region')->groupBy('region')->get();
                             @endphp
                             <div class="form-group row">
-                                <label class="col-md-4 col-form-label">Pilih Unit</label>
+                              <label class="col-md-4 col-form-label">Cabang Denpasar</label>
+                              <div class="col-md-8 parent-group">
+                              <select id="select-cabang" name="region_all" class="form-control select2 col-12" id="simple-select5">
+                                  <option value="">Pilih Salah Satu</option>
+                                  <option value="Cabang Denpasar">Cabang Denpasar</option>
+                              </select>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 col-form-label">Region</label>
                                 <div class="col-md-8 parent-group">
-                                <select name="unit" class="form-control select2 col-12" id="simple-select3">
+                                <select id="select-region" name="region" class="form-control select2 col-12" id="simple-select2">
                                     <option value="">Pilih Salah Satu</option>
-                                    @foreach ($unit as $cabang)
-                                        <option value="{{ $cabang->cabang}}">{{ $cabang->cabang}}</option>
-                                    @endforeach
+                                    {{-- @foreach ($region as $region)
+                                        <option value="{{ $region->region}}">{{ $region->region}}</option>
+                                    @endforeach --}}
                                 </select>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-4 col-form-label">Area</label>
                                 <div class="col-md-8 parent-group">
-                                <select name="area" class="form-control select2 col-12" id="simple-select4">
-                                    <option value="">Pilih Salah Satu</option>
+                                <select id="select-area" name="area" class="form-control select2 col-12" id="simple-select4">
+                                    {{-- <option value="">Pilih Salah Satu</option>
                                     @foreach ($area as $area)
                                         <option value="{{ $area->area}}">{{ $area->area}}</option>
-                                    @endforeach
+                                    @endforeach --}}
                                 </select>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-md-4 col-form-label">Region</label>
+                                <label class="col-md-4 col-form-label">Pilih Unit</label>
                                 <div class="col-md-8 parent-group">
-                                <select name="region" class="form-control select2 col-12" id="simple-select2">
-                                    <option value="">Pilih Salah Satu</option>
-                                    @foreach ($region as $region)
-                                        <option value="{{ $region->region}}">{{ $region->region}}</option>
-                                    @endforeach
+                                <select id="select-unit" name="unit" class="form-control select2 col-12" id="simple-select3">
+                                    {{-- <option value="">Pilih Salah Satu</option>
+                                    @foreach ($unit as $cabang)
+                                        <option value="{{ $cabang->cabang}}">{{ $cabang->cabang}}</option>
+                                    @endforeach --}}
                                 </select>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                              <label class="col-md-4 col-form-label">Cabang Denpasar</label>
-                              <div class="col-md-8 parent-group">
-                              <select name="region_all" class="form-control select2 col-12" id="simple-select5">
-                                  <option value="">Pilih Salah Satu</option>
-                                  <option value="Cabang Denpasar">Cabang Denpasar</option>
-                              </select>
-                              </div>
-                          </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div> <!-- /.card-body -->
@@ -655,6 +681,13 @@
         </div> <!-- .container-fluid -->
       </main> <!-- main -->
     </div> <!-- .wrapper -->
+    
+    <!-- Example of a loading animation -->
+    <div id="loadingAnimation">
+        <div class="loader"></div>
+    </div>
+
+    
     <script src="{{ URL::asset('js/jquery.min.js')}}"></script>
     <script src="{{ URL::asset('js/popper.min.js')}}"></script>
     <script src="{{ URL::asset('js/moment.min.js')}}"></script>
@@ -694,21 +727,72 @@
     <script src="{{ URL::asset('js/uppy.min.js') }}"></script>
     <script src="{{ URL::asset('js/quill.min.js') }}"></script>
     <script>
+      $(window).on('load', function() {
+          $('#loadingAnimation').fadeOut('slow'); // Hides the loading animation
+          $('#loadingAnimation').hide();
+          console.log('1');
+      });
+      </script>
+    <script>
+      // Cabang DPS, Region, Area, Unit
+        $(document).ready(function() {
+            $('#select-cabang').on('change', function() {
+                var selectedCabang = $(this).val();
+                $.ajax({
+                    url: "{{ route('pilih-region') }}", // Laravel route
+                    type: 'GET',
+                    data: { region: selectedCabang },
+                    success: function(data) {
+                        $('#select-region').html(data); // Update the Area dropdown
+                    }
+                });
+            });
+            $('#select-region').on('change', function() {
+                var selectedRegion = $(this).val();
+                $.ajax({
+                    url: "{{ route('pilih-area') }}", // Laravel route
+                    type: 'GET',
+                    data: { region: selectedRegion },
+                    success: function(data) {
+                        $('#select-area').html(data); // Update the Area dropdown
+                    }
+                });
+            });
+
+            $('#select-area').on('change', function() {
+                var selectedArea = $(this).val();
+                $.ajax({
+                    url: "{{ route('pilih-unit') }}", // Laravel route
+                    type: 'GET',
+                    data: { area: selectedArea },
+                    success: function(data) {
+                        $('#select-unit').html(data); // Update the Area dropdown
+                    }
+                });
+            });
+            // Similar for other dropdowns
+        });
+    </script>
+    <script>
       $('.select2').select2(
       {
+        placeholder: "Pilih Salah Satu",
         theme: 'bootstrap4',
       });
       $('.select5').select2(
       {
+        placeholder: "Pilih Salah Satu",
         theme: 'bootstrap4',
       });
       $('.select3').select2(
       {
+        placeholder: "Pilih Salah Satu",
         theme: 'bootstrap4',
       });
 
       $('.select4').select2(
       {
+        placeholder: "Pilih Salah Satu",
         theme: 'bootstrap4',
       });
       $('.select2-multi').select2(

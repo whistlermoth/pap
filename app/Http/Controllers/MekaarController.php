@@ -54,4 +54,33 @@ class MekaarController extends Controller
             return redirect()->back()->with('error', 'An error occurred while truncating the table.');
         }
     }
+
+    public function pilihArea(Request $request){
+        $selectedRegion = $request->region;
+        $areas = Mekaar::select('area')
+                       ->where('region', $selectedRegion)
+                       ->groupBy('area')
+                       ->get();
+
+        return view('ajax.area', compact('areas'));
+    }
+
+    public function pilihUnit(Request $request){
+        $selectedArea = $request->area;
+        $units = Mekaar::select('cabang')
+                       ->where('area', $selectedArea)
+                       ->groupBy('cabang')
+                       ->get();
+
+        return view('ajax.unit', compact('units'));
+    }
+
+    public function pilihRegion(Request $request){
+        $selectedArea = $request->area;
+        $region = Mekaar::select('region')
+                       ->groupBy('region')
+                       ->get();
+
+        return view('ajax.region', compact('region'));
+    }
 }
