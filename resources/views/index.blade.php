@@ -159,9 +159,17 @@
                           <div class="card-body">
                             <div class="row items-align-center">
                               <div class="col-4 text-center mb-3">
-                                <b>{{ $request->region }} {{ $request->area }} {{ $request->unit }} {{ $request->region_all }}</b><br>
+                                @if($request->unit)
+                                    <b>{{ $request->unit }}</b><br>
+                                @elseif($request->area)
+                                    <b>{{ $request->area }}</b><br>
+                                @elseif($request->region)
+                                    <b>{{ $request->region }}</b><br>
+                                @elseif($request->region_all)
+                                    <b>{{ $request->region_all }}</b><br>
+                                @endif
                                 @if(!empty($record))
-                                {{ \Carbon\Carbon::parse('08-01-2024')->format('d F Y') }}
+                                {{ \Carbon\Carbon::parse('08-01-2024')->translatedFormat('d F Y') }}
                                 @endif
                               </div>
                               @php
@@ -656,15 +664,22 @@
                     </div>
                     <div class="card-body">
                       <div class="row items-align-center">
-                        @if($request->area || $request->unit || $request->region_all)
+                        @if($request->unit)
                         <div class="col-12 text-center mb-3">
                           <a href="https://rbm.pnmdenpasar.com/" class="btn btn-dark" role="button" target="_blank">&nbsp;&nbsp;Create RBM (Bulanan)&nbsp;&nbsp;</a>
                         </div>
-                        @endif
-                        @if($request->region)
+                        @elseif($request->area)
+                        <div class="col-12 text-center mb-3">
+                          <a href="https://rbm.pnmdenpasar.com/" class="btn btn-dark" role="button" target="_blank">&nbsp;&nbsp;Create RBM (Bulanan)&nbsp;&nbsp;</a>
+                        </div>
+                        @elseif($request->region)
+                        <div class="col-12 text-center mb-3">
+                          <a href="https://rbm.pnmdenpasar.com/" class="btn btn-dark" role="button" target="_blank">&nbsp;&nbsp;Create RBM (Bulanan)&nbsp;&nbsp;</a>
+                        </div>
                         <div class="col-12 text-center mb-3">
                           <a href="https://bit.ly/PlanPencairanMekaar" class="btn btn-dark" role="button" target="_blank">Inputan Plan PNC (MRM)</a>
                         </div>
+                        @elseif($request->region_all)
                         <div class="col-12 text-center mb-3">
                           <a href="https://rbm.pnmdenpasar.com/" class="btn btn-dark" role="button" target="_blank">&nbsp;&nbsp;Create RBM (Bulanan)&nbsp;&nbsp;</a>
                         </div>
