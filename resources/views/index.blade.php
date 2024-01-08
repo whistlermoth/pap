@@ -264,13 +264,13 @@
                           <h6 class="mb-1">{{ number_format(optional($record)->sum('noc'), 0, ',', '.')}}</h6>
                         </div>
                         <div class="col-4 text-center mb-3">
-                          <p class="text mb-1">Target EoM</p>
+                          <p class="text mb-1">Target oY</p>
                           <h6 class="mb-1">{{ number_format(optional($record)->sum('target_eom_noc'), 0, ',', '.')}}</h6>
                         </div>
                       </div>
                       <div class="row items-align-center">
                         <div class="col-4 text-center mb-3">
-                          <p class="text mb-1">% EoM</p>
+                          <p class="text mb-1">% oY</p>
                           @if(!empty($record))
                           <h6 class="mb-1">{{ number_format(optional($record)->sum('noc')/ optional($record)->sum('target_eom_noc') * 100, 1)}} %</h6>
                             @endif
@@ -317,11 +317,11 @@
                           <h6 class="mb-1">{{ number_format(optional($record)->sum('os_actual'), 0, ',', '.')}}</h6>
                         </div>
                         <div class="col-4 text-center mb-3">
-                          <p class="text mb-1">Target EoM</p>
+                          <p class="text mb-1">Target oY</p>
                           <h6 class="mb-1">{{ number_format(optional($record)->sum('target_eom_os'), 0, ',', '.')}}</h6>
                         </div>
                         <div class="col-4 text-center mb-3">
-                          <p class="text mb-1">% EoM</p>
+                          <p class="text mb-1">% oY</p>
                           @if(!empty($record))
                           <h6 class="mb-1">{{ number_format(optional($record)->sum('os_actual')/ optional($record)->sum('target_eom_os') * 100, 1)}} %</h6>
                             @endif
@@ -362,7 +362,7 @@
                           <h6 class="mb-1">{{ number_format(optional($record)->sum('penyaluran_plafond_kumulatif'), 0, ',', '.')}}</h6>
                         </div>
                         <div class="col-4 text-center mb-3">
-                          <p class="text mb-1">Target EoM Lending</p>
+                          <p class="text mb-1">Target oY Lending</p>
                           <h6 class="mb-1">{{ number_format(optional($record)->sum('rkap_des'), 0, ',', '.')}}</h6>
                         </div>
 
@@ -456,11 +456,11 @@
                           @endif
                         </div>
                         <div class="col-4 text-center mb-3">
-                          <p class="text mb-1">Target EoM</p>
+                          <p class="text mb-1">Target oY</p>
                           <h6 class="mb-1">{{ number_format(optional($record)->sum('target_eom_par'), 0, ',', '.')}}</h6>
                         </div>
                         <div class="col-4 text-center mb-3">
-                          <p class="text mb-1">% EoM</p>
+                          <p class="text mb-1">% oY</p>
                           @if(!empty($record))
                           <h6 class="mb-1">{{ number_format(optional($record)->sum('target_eom_par')/ optional($record)->sum('os_par') * 100, 1)}} %</h6>
                             @endif
@@ -509,11 +509,11 @@
                       </div>
                       <div class="row items-align-center">
                         <div class="col-4 text-center mb-3">
-                          <p class="text mb-1">Target EoM</p>
+                          <p class="text mb-1">Target oY</p>
                           <h6 class="mb-1">{{ number_format(optional($record)->sum('target_eom_npl'), 0, ',', '.')}}</h6>
                         </div>
                         <div class="col-4 text-center mb-3">
-                          <p class="text mb-1">% EoM</p>
+                          <p class="text mb-1">% oY</p>
                           @if(!empty($record) && ($record->sum('os_npl') != 0))
                           <h6 class="mb-1">{{ number_format(optional($record)->sum('target_eom_npl') / optional($record)->sum('os_npl') * 100, 1)}} %</h6>
                           @else
