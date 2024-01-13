@@ -24,18 +24,17 @@ class MekaarController extends Controller
     }
 
     public function index(Request $request){
-        if(!empty($request->area)){
+        if(!empty($request->unit)){
+            $record = Mekaar::where('cabang', $request->unit)->get();
+        }elseif(!empty($request->area)){
             $record = Mekaar::where('area', $request->area)->get();
         }elseif(!empty($request->region)){
             $record = Mekaar::where('region', $request->region)->get();
-        }elseif(!empty($request->unit)){
-            $record = Mekaar::where('cabang', $request->unit)->get();
         }elseif(!empty($request->region_all)){
             if($request->region_all == 'Cabang Denpasar'){
                 $record = Mekaar::all();
             }
         }else{
-            $record = Mekaar::where('id', 93)->get();
             $record = null;
         }
         return view('index', compact('record', 'request'));
