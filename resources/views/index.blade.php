@@ -169,7 +169,7 @@
                                     <b>{{ $request->region_all }}</b><br>
                                 @endif
                                 @if(!empty($record))
-                                {{ \Carbon\Carbon::parse('05-02-2024')->translatedFormat('d F Y') }}
+                                {{ \Carbon\Carbon::parse('12-02-2024')->translatedFormat('d F Y') }}
                                 @endif
                               </div>
                               @php
@@ -222,7 +222,7 @@
                     <div class="card-body">
                       <div class="row items-align-center">
                         <div class="col-12 text-center mb-3">
-                          <p class="text mb-1">NoC</p>
+                          <p class="text mb-1">NoA</p>
                           <h6 class="mb-1">{{ number_format(optional($record)->sum('noc_bln_lalu'), 0, ',', '.')}}</h6>
                         </div>
                         <div class="col-12 text-center mb-3">
@@ -259,7 +259,7 @@
                     <div class="card-body">
                       <div class="row items-align-center">
                         <div class="col-12 text-center mb-3">
-                          <p class="text mb-1">Growth NoC</p>
+                          <p class="text mb-1">Growth NoA</p>
                           <h6 class="mb-1">{{ strtr(number_format(optional($record)->sum('growth_noc_bln_lalu'), 0, ',', '.'), ['%' => ''])}}</h6>
                         </div>
                         <div class="col-12 text-center mb-3">
@@ -285,7 +285,7 @@
                 <div class="col-md-4 col-lg-4">
                   <div class="card shadow eq-card mb-4">
                     <div class="card-header">
-                      <strong class="card-title">NOC</strong>
+                      <strong class="card-title">NoA</strong>
                     </div>
                     <div class="card-body">
                       <div class="row items-align-center">
@@ -314,7 +314,7 @@
                           <h6 class="mb-1">{{ number_format(optional($record)->sum('noc') - optional($record)->sum('noc_bln_lalu'), 0, ',', '.')}}</h6>
                         </div>
                         <div class="col-4 text-center mb-3">
-                          <p class="text mb-1">Gap NOC</p>
+                          <p class="text mb-1">Gap NoA</p>
                           <h6 class="mb-1">{{ number_format(optional($record)->sum('noc') - optional($record)->sum('target_eom_noc'), 0, ',', '.')}}</h6>
                         </div>
                       </div>
