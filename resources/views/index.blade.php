@@ -311,7 +311,7 @@
                         </div>
                         <div class="col-4 text-center mb-3">
                           <p class="text mb-1">Growth</p>
-                          <h6 class="mb-1">{{ number_format(optional($record)->sum('noc') - optional($record)->sum('noc_bln_lalu'), 0, ',', '.')}}</h6>
+                          <h6 class="mb-1">{{ number_format(optional($record)->sum('noa') - optional($record)->sum('noc_bln_lalu'), 0, ',', '.')}}</h6>
                         </div>
                         <div class="col-4 text-center mb-3">
                           <p class="text mb-1">Gap NoA</p>
