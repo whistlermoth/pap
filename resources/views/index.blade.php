@@ -169,7 +169,7 @@
                                     <b>{{ $request->region_all }}</b><br>
                                 @endif
                                 @if(!empty($record))
-                                {{ \Carbon\Carbon::parse('06-03-2024')->translatedFormat('d F Y') }}
+                                {{ \Carbon\Carbon::parse('11-03-2024')->translatedFormat('d F Y') }}
                                 @endif
                               </div>
                               @php
@@ -454,7 +454,7 @@
                         </div>
                         <div class="col-4 text-center mb-3">
                           <p class="text mb-1">Progress NoA PAR</p>
-                          <h6 class="mb-1">{{ optional($record)->sum('noa_par') - optional($record)->sum('noa_par_bln_lalu')}}</h6>
+                          <h6 class="mb-1">{{ number_format(optional($record)->sum('noa_par') - optional($record)->sum('noa_par_bln_lalu'), 0, ',', '.')}}</h6>
                         </div>
                         <div class="col-4 text-center mb-3">
                           <p class="text mb-1">% NoA PAR</p>
