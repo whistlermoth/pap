@@ -169,7 +169,7 @@
                                     <b>{{ $request->region_all }}</b><br>
                                 @endif
                                 @if(!empty($record))
-                                {{ \Carbon\Carbon::parse('11-03-2024')->translatedFormat('d F Y') }}
+                                {{ \Carbon\Carbon::parse('18-03-2024')->translatedFormat('d F Y') }}
                                 @endif
                               </div>
                               <div class="col-3 text-center mb-3">
