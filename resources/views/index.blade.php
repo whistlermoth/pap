@@ -158,7 +158,7 @@
                         <div class="card shadow eq-card mb-4">
                           <div class="card-body">
                             <div class="row items-align-center">
-                              <div class="col-3 text-center mb-3">
+                              <div class="col-4 text-center mb-3">
                                 @if($request->unit)
                                     <b>{{ $request->unit }}</b><br>
                                 @elseif($request->area)
@@ -172,12 +172,6 @@
                                 {{ \Carbon\Carbon::parse('25-03-2024')->translatedFormat('d F Y') }}
                                 @endif
                               </div>
-                              <div class="col-3 text-center mb-3">
-                                <p class="text mb-1">Kelas Unit</p>
-                                @if($record)
-                                <h6 class="mb-1"> {{ $record->first()->kelas_unit}}</h6>
-                                @endif
-                              </div>
                               @php
                                   $currentDate = Illuminate\Support\Carbon::now();
 
@@ -187,7 +181,7 @@
                                 // Calculate the number of days left
                                 $daysLeft = $currentDate->diffInDays($endOfYear);
                               @endphp   
-                              <div class="col-3 text-center mb-3">
+                              <div class="col-4 text-center mb-3">
                                 <p class="text mb-1">Sisa Hari Kerja</p>
                                 @if($record)
                                 <h6 class="mb-1"> {{ $record->first()->sisa_minggu_kerja_sd_des_23 * 5 }}</h6>
@@ -205,10 +199,22 @@
                                 $weeksLeft = $currentDate->diffInWeeks($endOfYear);
 
                               @endphp       
-                              <div class="col-3 text-center mb-3">
+                              <div class="col-4 text-center mb-3">
                                 <p class="text mb-1">Sisa Minggu Kerja</p>
                                 @if(!empty($record))
                                 <h6 class="mb-1">{{ $record->first()->sisa_minggu_kerja_sd_des_23 }} Minggu</h6>
+                                @endif
+                              </div>
+                              <div class="col-6 text-center mb-3">
+                                <p class="text mb-1">Kelas Unit</p>
+                                @if($record)
+                                <h6 class="mb-1"> {{ $record->first()->kelas_unit}}</h6>
+                                @endif
+                              </div>
+                              <div class="col-6 text-center mb-3">
+                                <p class="text mb-1">BWMP</p>
+                                @if($record)
+                                <h6 class="mb-1"> {{ $record->first()->penyaluran_plafond_home}}</h6>
                                 @endif
                               </div>
                             </div>
