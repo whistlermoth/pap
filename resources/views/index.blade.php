@@ -205,16 +205,22 @@
                                 <h6 class="mb-1">{{ $record->first()->sisa_minggu_kerja_sd_des_23 }} Minggu</h6>
                                 @endif
                               </div>
-                              <div class="col-6 text-center mb-3">
+                              <div class="col-4 text-center mb-3">
                                 <p class="text mb-1">Kelas Unit</p>
                                 @if($record)
                                 <h6 class="mb-1"> {{ $record->first()->kelas_unit}}</h6>
                                 @endif
                               </div>
-                              <div class="col-6 text-center mb-3">
+                              <div class="col-4 text-center mb-3">
                                 <p class="text mb-1">BWMP</p>
                                 @if($record)
                                 <h6 class="mb-1"> {{ $record->first()->penyaluran_plafond_home}}</h6>
+                                @endif
+                              </div>
+                              <div class="col-4 text-center mb-3">
+                                <p class="text mb-1"></p>
+                                @if($record)
+                                <h6 class="mb-1"></h6>
                                 @endif
                               </div>
                             </div>
