@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="icon.jpg">
     <title>P.A.P [Potret Angka Portfolio] Mekaar - PNM Denpasar</title>
     <!-- Simple bar CSS -->
     <link rel="stylesheet" href="{{ URL::asset('css/simplebar.css')}}">
